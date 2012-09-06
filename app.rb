@@ -4,8 +4,8 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 
-set :port, 80
+set :port, 80 if ENV["APPENV"] == "production"
 
 get '/' do
-  puts "dicks"
+  "dicks"
 end
